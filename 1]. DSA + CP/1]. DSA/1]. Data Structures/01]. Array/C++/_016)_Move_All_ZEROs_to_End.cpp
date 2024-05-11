@@ -3,15 +3,15 @@ using namespace std;
 
 void moveToEnd(int arr[], int n)
 {
-    int count = 0;
+    int j = -1;
     for(int i=0; i<n; i++)
     {
         if(arr[i] != 0)
         {
             int temp = arr[i];
-            arr[i] = arr[count];
-            arr[count] = temp;
-            count++;
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j++;
         }
     }
 }
@@ -24,7 +24,7 @@ int main()
     {
         cout<<arr[i]<<"  ";
     }
-    cout<<endl<<"Size = "<<n<<endl;
+   
 
     moveToEnd(arr, n);
     cout<<"After Move Zeros: ";
@@ -32,5 +32,5 @@ int main()
     {
         cout<<arr[i]<<"  ";
     }
-    cout<<endl<<"Size = "<<n<<endl;
+   
 }
